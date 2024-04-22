@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jvargasT3.Vistas.Vnotas"
+             Title="">
+    <ScrollView>
+    <VerticalStackLayout
+                    Padding="10,0"
+                    Spacing="15" >
+        <Image WidthRequest="400"
+                   HeightRequest="100"
+                   Source="logouisrael2.png"
+                   Aspect="AspectFill"/>
+
+
+        <Label
+                Text="Sistema de Calificaciones UISRAEL"
+                FontSize="Title"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" 
+                Margin="0,30,0,10"/>
+        <Label
+                x:Name="Informacion"
+                FontSize="Title"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" 
+                Margin="0,30,0,10"/>    
+
+
+        <DatePicker 
+                 x:Name="fechaPicker" 
+                 Date= "04/13/2024" 
+                 Format="MM/dd/yyyy"/>
+
+        <Picker x:Name="estudiantePicker" Title="Seleccione un estudiante">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Juan</x:String>
+                    <x:String>Maria</x:String>
+                    <x:String>Carlos</x:String>
+                    <x:String>Laura</x:String>
+                    <x:String>Pedro</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Parcial 1" FontSize="Subtitle" Margin="0,20,0,0"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text=" (1) Nota  :" VerticalOptions="Center"/>
+            <Picker x:Name="seguimiento1Picker" Title="Seleccione una nota">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                        <x:String>8</x:String>
+                        <x:String>9</x:String>
+                        <x:String>10</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="(1)Examen :" VerticalOptions="Center"/>
+            <Picker x:Name="examen1Picker" Title="Seleccione una nota">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                        <x:String>8</x:String>
+                        <x:String>9</x:String>
+                        <x:String>10</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+
+        <Label Text="Parcial 2" FontSize="Subtitle" Margin="0,20,0,0"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="(2)Nota :" VerticalOptions="Center"/>
+            <Picker x:Name="seguimiento2Picker" Title="Seleccione una nota">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                        <x:String>8</x:String>
+                        <x:String>9</x:String>
+                        <x:String>10</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="(2)Examen :" VerticalOptions="Center"/>
+            <Picker x:Name="examen2Picker" Title="Seleccione una nota">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                        <x:String>8</x:String>
+                        <x:String>9</x:String>
+                        <x:String>10</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+
+
+
+        <Button 
+                Text="Calcular" 
+                Clicked="CalcularButton_Clicked" 
+                HorizontalOptions="Center" 
+                Margin="0,20"/>
+
+        <Label 
+                x:Name="resultadoLabel" 
+                FontSize="Subtitle" 
+                Margin="0,20,0,10"/>
+
+
+    </VerticalStackLayout>
+                    
+        </ScrollView>
+</ContentPage>

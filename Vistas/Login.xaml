@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jvargasT3.Vistas.Login"
+             Title=" ">
+    <VerticalStackLayout
+        
+        Padding="30,0"
+        Spacing="25">
+
+        <Label 
+            Text="Aplicacion Semana 3"
+            HorizontalTextAlignment="Center"
+            FontSize="20"
+            TextColor="Red">
+
+        </Label>
+        <Image Source ="https://c0.klipartz.com/pngpicture/154/803/gratis-png-iconos-de-computadora-perfil-de-usuario-avatar.png"
+            HeightRequest="100"></Image>
+        <Image Source="uisrael2024"></Image>
+
+        <!--ingresar filas-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!-- ingresar columnsd-->
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- ingresar texto-->
+
+            <Label Text="USUARIO"
+                   VerticalOptions="Center"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtUsuario"
+                   Placeholder="Ingrese su Usuarioi"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+            <Label Text="CONTRASEÑA"
+                    VerticalOptions="Center"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    Grid.Row="1"
+                    Grid.Column="0"/>
+            <Entry x:Name="txtContrasena"
+                     Placeholder="Ingrese Contraseña"
+                     Grid.Row="1"
+                     Grid.Column="1"/>
+            <Label Text=""
+                   Grid.Row="2"/>
+            <Button x:Name="btnInicio"
+                    Text="Iniciar Seccion"
+                    Clicked="IniciarSesion_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="0"/>
+            
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
